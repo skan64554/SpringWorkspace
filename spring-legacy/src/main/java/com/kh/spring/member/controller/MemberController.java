@@ -53,6 +53,15 @@ public class MemberController {
 //		return "home";
 //	}
 	
+	/*
+	 * 커맨드 객체 방식
+	 * @ModelAttribute
+	 *  - 메서드의 매개변수로 VO클래스 타입을 지정하는 경우 실행
+	 *  - 요청시 전달한 NAME속성과 일치하는 vo클래스 필드의 setter메서드를
+	 *  호출하여 데이터를 바인딩
+	 *  - 매개변수 클래스와 일치하는 클래스의 "기본생성자" 호출 후,
+	 *    파라미터의 key값과 클래스의 필드명이 일치하는 경우 setter호출
+	 */
 	public String login(Member m) {
 		System.out.println(m);
 		return "home";
